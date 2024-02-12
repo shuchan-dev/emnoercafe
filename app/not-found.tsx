@@ -1,10 +1,6 @@
 import Link from "next/link";
-function sleep(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-export const dynamic = "force-dynamic";
+
 export default async function NotFound() {
-  await sleep(1000);
   return (
     <div className=" flex flex-grow items-center justify-center mt-[80px]">
       <div className="r p-8 text-center ">
