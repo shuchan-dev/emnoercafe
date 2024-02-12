@@ -8,12 +8,12 @@ export default async function NotFound() {
         <p className="text-muted-foreground">
           Oops! The page you are looking for could not be found.
         </p>
-        <Link
+        <a
           href="/"
           className="mt-4 inline-block rounded bg-emerald-700 px-4 py-2 font-semibold text-white hover:bg-emerald-500"
         >
           Go back to Home
-        </Link>
+        </a>
       </div>
     </div>
   );
