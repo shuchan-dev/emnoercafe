@@ -20,7 +20,7 @@ const Cards = () => {
       </div>
       {/* CARD */}
       <div className="flex flex-wrap items-center justify-center gap-2 xl:gap-4">
-        <div className="flex-shrink-0 my-3 relative overflow-hidden bg-emerald-600 rounded-lg w-44 h-60 sm:w-56 sm:h-80 xl:w-[300px] xl:h-[380px] shadow-lg">
+        <div className="flex-shrink-0 my-3 relative overflow-hidden bg-emerald-600 rounded-lg w-36 h-60 xs:w-44 sm:w-56 sm:h-80 xl:w-[300px] xl:h-[380px] shadow-lg">
           <div className="relative flex px-1 pt-1  items-center justify-center">
             <Image
               className="relative w-60 h-36 sm:h-52 sm:mb-5 rounded-lg xl:h-64 xl:w-72"
@@ -31,12 +31,14 @@ const Cards = () => {
             />
           </div>
           <div className="relative text-white px-2 ">
-            <span className="block opacity-75 -mb-1 sm:text-lg">Indoor</span>
+            <span className="block opacity-75 -mb-1 text-sm sm:text-lg">
+              Indoor
+            </span>
             <div className="flex flex-wrap gap-2 xl:justify-between">
-              <span className="block font-semibold text-xl sm:text-2xl">
+              <span className="block font-semibold text-lg sm:text-2xl">
                 Peace Lily
               </span>
-              <TooltipProvider delayDuration={100}>
+              <TooltipProvider delayDuration={50}>
                 <Tooltip>
                   <TooltipTrigger className="bg-primary rounded-full text-primary-foreground text-xs font-bold px-3 py-2 leading-none flex items-center">
                     Rp.79.900
@@ -49,7 +51,7 @@ const Cards = () => {
             </div>
           </div>
         </div>
-        <div className="flex-shrink-0 my-3 relative overflow-hidden bg-violet-500 rounded-lg w-44 h-60 shadow-lg sm:w-56 sm:h-80 xl:w-[300px] xl:h-[380px]">
+        <div className="flex-shrink-0 my-3 relative overflow-hidden bg-violet-500 rounded-lg w-36 h-60 xs:w-44 shadow-lg sm:w-56 sm:h-80 xl:w-[300px] xl:h-[380px]">
           <div className="relative flex px-1 pt-1  items-center justify-center">
             <Image
               className="relative w-60 h-36 rounded-lg sm:h-52 sm:mb-5 xl:h-64 xl:w-72"
@@ -60,12 +62,14 @@ const Cards = () => {
             />
           </div>
           <div className="relative text-white px-2 ">
-            <span className="block opacity-75 -mb-1 sm:text-lg">Indoor</span>
+            <span className="block opacity-75 -mb-1 text-sm sm:text-lg">
+              Indoor
+            </span>
             <div className="flex flex-wrap gap-2 xl:justify-between">
-              <span className="block font-semibold text-xl sm:text-2xl ">
+              <span className="block font-semibold text-lg sm:text-2xl ">
                 Peace Lily
               </span>
-              <TooltipProvider delayDuration={100}>
+              <TooltipProvider delayDuration={50}>
                 <Tooltip>
                   <TooltipTrigger className="bg-primary rounded-full text-primary-foreground text-xs font-bold px-3 py-2 leading-none flex items-center">
                     Rp.99.900
@@ -78,7 +82,7 @@ const Cards = () => {
             </div>
           </div>
         </div>
-        <div className="flex-shrink-0 my-3 relative overflow-hidden bg-purple-500 rounded-lg w-44 h-60 shadow-lg sm:w-56 sm:h-80 xl:w-[300px] xl:h-[380px]">
+        <div className="flex-shrink-0 my-3 relative overflow-hidden bg-purple-500 rounded-lg w-36 xs:w-44 h-60 shadow-lg sm:w-56 sm:h-80 xl:w-[300px] xl:h-[380px]">
           <div className="relative flex px-1 pt-1  items-center justify-center">
             <Image
               className="relative w-60 h-36 rounded-lg sm:h-52 sm:mb-5 xl:h-64 xl:w-72"
@@ -89,12 +93,14 @@ const Cards = () => {
             />
           </div>
           <div className="relative text-white px-2 ">
-            <span className="block opacity-75 -mb-1  sm:text-lg ">Indoor</span>
+            <span className="block opacity-75 -mb-1 text-sm  sm:text-lg ">
+              Indoor
+            </span>
             <div className="flex flex-wrap gap-2 xl:justify-between">
-              <span className="block font-semibold text-xl sm:text-2xl ">
+              <span className="block font-semibold text-lg sm:text-2xl ">
                 Peace Lily
               </span>
-              <TooltipProvider delayDuration={100}>
+              <TooltipProvider delayDuration={50}>
                 <Tooltip>
                   <TooltipTrigger className="bg-primary rounded-full text-primary-foreground text-xs font-bold px-3 py-2 leading-none flex items-center">
                     Rp.69.900
@@ -107,7 +113,7 @@ const Cards = () => {
             </div>
           </div>
         </div>
-        <div className="flex-shrink-0 my-3 relative overflow-hidden bg-teal-500 rounded-lg w-44 h-60 sm:w-56 sm:h-80 shadow-lg xl:w-[300px] xl:h-[380px]">
+        <div className="flex-shrink-0 my-3 relative overflow-hidden bg-teal-500 rounded-lg w-36 xs:w-44 h-60 sm:w-56 sm:h-80 shadow-lg xl:w-[300px] xl:h-[380px]">
           <div className="relative flex px-1 pt-1  items-center justify-center">
             <Image
               className="relative w-60 h-36 rounded-lg sm:h-52 sm:mb-5 xl:h-64 xl:w-72"
@@ -118,12 +124,14 @@ const Cards = () => {
             />
           </div>
           <div className="relative text-white px-2 ">
-            <span className="block opacity-75 -mb-1 sm:text-lg">Indoor</span>
+            <span className="block opacity-75 -mb-1 text-sm sm:text-lg">
+              Indoor
+            </span>
             <div className="flex flex-wrap gap-2 xl:justify-between">
-              <span className="block font-semibold text-xl sm:text-2xl ">
+              <span className="block font-semibold text-lg sm:text-2xl ">
                 Peace Lily
               </span>
-              <TooltipProvider delayDuration={100}>
+              <TooltipProvider delayDuration={50}>
                 <Tooltip>
                   <TooltipTrigger className="bg-primary rounded-full text-primary-foreground text-xs font-bold px-3 py-2 leading-none flex items-center">
                     Rp.49.900
