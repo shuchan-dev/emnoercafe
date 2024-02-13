@@ -18,6 +18,7 @@ import {
   SquareUserRound,
 } from "lucide-react";
 import Link from "next/link";
+import { Cart } from "./Cart";
 
 const Header = () => {
   return (
@@ -79,7 +80,7 @@ const Header = () => {
           <Link href="/">Emnoer Cafe</Link>
         </h2>
         <div>
-          <ShoppingCart className=" text-teal-300" />
+          <Cart />
         </div>
       </Menubar>
       <MenubarSeparator className="mx-auto" />

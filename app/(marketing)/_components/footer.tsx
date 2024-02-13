@@ -4,7 +4,7 @@ import Copyright from "./copyright";
 
 const Footer = () => {
   return (
-    <div className="bg-primary mt-[200px]">
+    <div className="bg-primary">
       <MenubarSeparator className="mx-auto" />
       <footer className="container bg-primary p-4">
         <div className="grid grid-cols-1 sm:grid-cols-auto-fit lg:grid-cols-4 gap-5 sm:gap-1.5 ">
