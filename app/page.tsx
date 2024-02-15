@@ -3,7 +3,7 @@ import { Hero } from "./(marketing)/_components/hero";
 import Image from "next/image";
 import Cards from "./(marketing)/_components/card";
 import { Button } from "@/components/ui/button";
-import Marketing from "./(marketing)/_components/marketing";
+import Banner from "./(marketing)/_components/marketing";
 
 export const dynamic = "force-dynamic";
 
@@ -46,7 +46,7 @@ export default async function Home() {
 
       <Cards />
 
-      <Marketing />
+      <Banner />
     </>
   );
 }
