@@ -1,11 +1,12 @@
 import Icons from "@/components/icon/icon";
 import { MenubarSeparator } from "@/components/ui/menubar";
 import Copyright from "./copyright";
+import { Separator } from "@/components/ui/separator";
 
 const Footer = () => {
   return (
     <div className="bg-primary">
-      <MenubarSeparator className="mx-auto" />
+      <Separator />
       <footer className="container bg-primary p-4">
         <div className="grid grid-cols-1 sm:grid-cols-auto-fit lg:grid-cols-4 gap-5 sm:gap-1.5 ">
           <div className="w-9/10 mx-auto text-decoration-none list-none">

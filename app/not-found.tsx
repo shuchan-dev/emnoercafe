@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default async function NotFound() {
   return (
     <div className=" flex flex-grow items-center justify-center mt-[80px]">

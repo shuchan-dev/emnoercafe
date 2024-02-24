@@ -1,9 +1,11 @@
 import Link from "next/link";
-import { Hero } from "./(marketing)/_components/hero";
+import { Hero } from "./_components/hero";
 import Image from "next/image";
-import Cards from "./(marketing)/_components/card";
+import Cards from "./_components/card";
 import { Button } from "@/components/ui/button";
-import Banner from "./(marketing)/_components/marketing";
+import Banner from "./_components/marketing";
+import { ChevronsRightIcon } from "lucide-react";
+import Footer from "./_components/footer";
 
 export const dynamic = "force-dynamic";
 
@@ -43,10 +45,28 @@ export default async function Home() {
           </div>
         </div>
       </section>
-
+      {/* card wrapper */}
+      <div className="flex items-center flex-col justify-center mt-32 mb-10">
+        <h1 className="text-3xl md:text-4xl text-teal-300 leading-relaxed md:leading-snug ">
+          Food Menu
+        </h1>
+        <p className="text-sm text-muted-foreground ">Explor Our Best Menu</p>
+      </div>
       <Cards />
-
+      <div className="flex items-center justify-center mt-8">
+        <Button
+          variant="outline"
+          asChild
+          className="bg-primary text-primary-foreground gap-2 border-teal-300 hover:bg-teal-300 text-teal-300"
+        >
+          <Link href="/menu">
+            See All <ChevronsRightIcon />
+          </Link>
+        </Button>
+      </div>
+      {/* card wpraper end */}
       <Banner />
+      <Footer />
     </>
   );
 }

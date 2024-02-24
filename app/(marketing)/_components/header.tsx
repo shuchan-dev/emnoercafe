@@ -13,8 +13,6 @@ import {
   CircleUserRound,
   FileCheck2,
   HomeIcon,
-  LogOut,
-  ShoppingCart,
   SquareUserRound,
 } from "lucide-react";
 import Link from "next/link";
@@ -77,7 +75,7 @@ const Header = () => {
           </MenubarContent>
         </MenubarMenu>
         <h2 className="text-teal-300 font-bold text-xl">
-          <Link href="/">Emnoer Cafe</Link>
+          <a href="/">Emnoer Cafe</a>
         </h2>
         <div>
           <Cart />

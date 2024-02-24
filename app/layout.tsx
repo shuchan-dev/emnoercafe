@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "./(marketing)/_components/header";
-import Footer from "./(marketing)/_components/footer";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
@@ -18,13 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={`${inter.className} bg-primary`}>
-        <header>
-          <Header />
-        </header>
-        <div className="container">{children}</div>
-        <Footer />
+        <div>{children}</div>
+        <Toaster />
       </body>
     </html>
   );
