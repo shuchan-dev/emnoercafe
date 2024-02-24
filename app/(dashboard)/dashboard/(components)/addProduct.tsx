@@ -31,10 +31,7 @@ const AddProduct = () => {
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] bg-primary text-primary-foreground ">
         <DialogHeader>
-          <DialogTitle>Edit profile</DialogTitle>
-          <DialogDescription>
-            Make changes to your profile here. Click save when youre done.
-          </DialogDescription>
+          <DialogTitle>Add New Product</DialogTitle>
         </DialogHeader>
         <form action={formAction} className="text-primary">
           <div className="mb-4">
@@ -129,14 +126,19 @@ const AddProduct = () => {
             <p className="mt-2 text-sm text-red-500">{state?.message}</p>
           </div>
 
-          <DialogClose>
+          <DialogFooter>
+            <DialogClose>
+              <Button className="bg-violet-600 w-44 hover:bg-violet-900">
+                Close
+              </Button>
+            </DialogClose>
             <Button
               type="submit"
               className="bg-emerald-600 hover:bg-emerald-700 w-full"
             >
               Submit
             </Button>
-          </DialogClose>
+          </DialogFooter>
         </form>
       </DialogContent>
     </Dialog>
