@@ -20,6 +20,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={`${inter.className} bg-primary`}>
         <div>{children}</div>
+        {/* 52:37 */}
         <Toaster />
       </body>
     </html>
