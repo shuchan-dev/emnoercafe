@@ -8,3 +8,14 @@ export const getProducts = async () => {
     throw new Error("Fail to fetch data..!");
   }
 };
+
+export const getProductsById = async (id: string) => {
+  try {
+    const product = await prisma.product.findUnique({
+      where: { id },
+    });
+    return product;
+  } catch (error) {
+    throw new Error("Fail to fetch data..!");
+  }
+};

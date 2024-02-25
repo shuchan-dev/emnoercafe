@@ -1,18 +1,37 @@
+"use client";
 import { Button } from "@/components/ui/button";
-import { PencilLine, PlusIcon, Trash2 } from "lucide-react";
+import { delateContact } from "@/lib/actions";
+import { cn } from "@/lib/utils";
+import { PencilLine, Trash2 } from "lucide-react";
 import Link from "next/link";
+import { useFormStatus } from "react-dom";
+import { toast } from "sonner";
 
-// export const CreateButton = () => {
-//   return (
-//     <Button variant="ghost" className="border-rose-600 border-2">
-//       <PlusIcon className="mr-2" />
-//       Create
-//     </Button>
-//   );
-// };
-export const EditButton = () => {
+export const SubmitButton = ({ label }: { label: string }) => {
+  const { pending } = useFormStatus();
+
+  console.log("🚀 ~ SubmitButton ~ pending:", pending);
+
   return (
-    <Link href="/dashboard/create">
+    <Button
+      type="submit"
+      className={cn("bg-emerald-600 w-44 hover:bg-emerald-700 w", {
+        "opacity-5 cursor-progress": pending,
+      })}
+      disabled={pending}
+    >
+      {label == "save" ? (
+        <span>{pending ? "Saving.." : "Save"}</span>
+      ) : (
+        <span>{pending ? "Upadating.." : "Update"}</span>
+      )}
+    </Button>
+  );
+};
+
+export const EditButton = ({ id }: { id: string }) => {
+  return (
+    <Link href={`dashboard/edit/${id}`}>
       <Button
         variant="link"
         className=" text-primary-foreground border-2 hover:bg-green-400 hover:text-primary"
@@ -23,10 +42,21 @@ export const EditButton = () => {
     </Link>
   );
 };
-export const DelateButton = () => {
+export const DelateButton = ({ id }: { id: string }) => {
+  const DelateButtonById = delateContact.bind(null, id);
+  const handleDelete = () => {
+    toast.promise(DelateButtonById, {
+      loading: "Loading delate.....",
+      success: "Product Delete Success",
+      error: "Failde to delate product",
+    });
+  };
+
   return (
-    <Button variant="destructive" className="hover:bg-rose-700" size="icon">
-      <Trash2 />
-    </Button>
+    <form action={handleDelete}>
+      <Button variant="destructive" className="hover:bg-rose-700" size="icon">
+        <Trash2 />
+      </Button>
+    </form>
   );
 };

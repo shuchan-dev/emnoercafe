@@ -43,7 +43,7 @@ export const DataTable = async () => {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {products.map((product, index) => (
+        {products.map((product: any, index: any) => (
           <TableRow key={product.id}>
             <TableCell className="text-center ">{index + 1}</TableCell>
             <TableCell className="text-center ">
@@ -56,8 +56,8 @@ export const DataTable = async () => {
               {formatDate(product.createdAt.toString())}
             </TableCell>
             <TableCell className="text-center flex justify-center gap-2 ">
-              <EditButton />
-              <DelateButton />
+              <EditButton id={product.id} />
+              <DelateButton id={product.id} />
             </TableCell>
           </TableRow>
         ))}

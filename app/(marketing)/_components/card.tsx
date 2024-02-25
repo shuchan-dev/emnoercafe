@@ -9,7 +9,6 @@ import { getProducts } from "@/lib/data";
 
 const Cards = async () => {
   const products = await getProducts();
-
   return (
     <div className="flex flex-wrap items-center justify-center gap-1 xl:gap-1">
       {products.map((product) => (

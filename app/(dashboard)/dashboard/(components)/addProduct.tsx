@@ -8,7 +8,6 @@ import { Textarea } from "@/components/ui/textarea";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
@@ -17,6 +16,7 @@ import {
 // import { CreateButton } from "./actionButton";
 import { PlusIcon } from "lucide-react";
 import { DialogClose } from "@radix-ui/react-dialog";
+import { SubmitButton } from "./actionButton";
 
 const AddProduct = () => {
   const [state, formAction] = useFormState(addProduct, null);
@@ -125,20 +125,19 @@ const AddProduct = () => {
           <div id="message-error" aria-live="polite" aria-atomic="true">
             <p className="mt-2 text-sm text-red-500">{state?.message}</p>
           </div>
-
-          <DialogFooter>
+          <div className="flex justify-between gap-2">
             <DialogClose>
-              <Button className="bg-violet-600 w-44 hover:bg-violet-900">
+              <Button
+                type="button"
+                className="bg-violet-600 w-44 hover:bg-violet-900"
+              >
                 Close
               </Button>
             </DialogClose>
-            <Button
-              type="submit"
-              className="bg-emerald-600 hover:bg-emerald-700 w-full"
-            >
-              Submit
-            </Button>
-          </DialogFooter>
+            <DialogFooter>
+              <SubmitButton label="save" />
+            </DialogFooter>
+          </div>
         </form>
       </DialogContent>
     </Dialog>

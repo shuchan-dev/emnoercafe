@@ -18,7 +18,7 @@ model Product {
   id          String   @id @default(cuid())
   image       String?
   productName String
-  desc        String?
+  desc        String
   category    String
   price       String
   createdAt   DateTime @default(now())

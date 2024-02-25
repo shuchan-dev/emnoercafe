@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-primary`}>
         <div>{children}</div>
         {/* 52:37 */}
-        <Toaster />
+        <Toaster position="bottom-right" />
       </body>
     </html>
   );
