@@ -1,8 +1,29 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 
 export const Hero = () => {
+  const h1 = [
+    {
+      text: "Fresh Food.",
+      className: "text-3xl md:text-5xl text-teal-300 tracking-loose",
+    },
+  ];
+  const h2 = [
+    {
+      text: "START YOUR DAY",
+    },
+    {
+      text: "WITH",
+      className: "text-wrap",
+    },
+    {
+      text: "ENJOYMENT",
+      className: "text-wrap",
+    },
+  ];
+
   return (
     <>
       <section>
@@ -10,10 +31,16 @@ export const Hero = () => {
           <div className="mx-auto flex flex-col md:flex-row items-center my-12 md:mt-[120px] md:mb-[100px] lg:mb-[160px]">
             <div className="flex flex-col w-full lg:w-1/3 justify-center items-start ">
               <h1 className="text-3xl md:text-5xl text-teal-300 tracking-loose">
-                Fresh Food
+                <TypewriterEffectSmooth
+                  words={h1}
+                  cursorClassName="bg-teal-300"
+                />
               </h1>
               <h2 className="text-3xl md:text-5xl leading-relaxed md:leading-snug mb-2">
-                START YOUR DAY WITH ENJOYMENT
+                <TypewriterEffectSmooth
+                  words={h2}
+                  cursorClassName="bg-primary-foreground"
+                />
               </h2>
               <p className="text-sm md:text-base text-muted-foreground mb-4">
                 Explore our menu just click and book enjoy the comfort with us
